@@ -58,11 +58,22 @@ public abstract class Person {
     
     public abstract void  work();
 
-    public void enterPlace(){
-        System.out.println(restrictionPolicy.getPolicy());
-    }
-    
     /* --- Implementation methods --- */
+
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                '}';
+    }
+
+    public  void print(){
+        System.out.println(toString());
+        System.out.println("Entering: " + restrictionPolicy.getPolicy());
+
+    }
 
 
 } //end class Person
